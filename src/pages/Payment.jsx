@@ -4,6 +4,7 @@ import Footer from '../components/products/Footer';
 import { useLocation } from 'react-router-dom';
 import Stripe from '../components/Stripe';
 import logoStripe from '../assets/stripe.png'
+import logocod from '../assets/cod.png'
 
 const Payment = () => {
 
@@ -20,7 +21,7 @@ const Payment = () => {
                 <div className='w-7/12 md:w-full'>
                     <div className='pr-2 md:pr-0'>
                         <div className='flex flex-wrap'>
-                        <div onClick={() => setPaymentMethod('stripe')} 
+        <div onClick={() => setPaymentMethod('stripe')} 
                         className={`w-[20%] border-r cursor-pointer py-8 px-12 ${paymentMethod === 'stripe' ? 'bg-white':'bg-slate-100'} `} >
             <div className='flex flex-col gap-[3px] justify-center items-center'>
             <img src={logoStripe} alt="stripe" />
@@ -30,7 +31,7 @@ const Payment = () => {
 
         <div onClick={() => setPaymentMethod('cod')} className={`w-[20%] border-r cursor-pointer py-8 px-12 ${paymentMethod === 'cod' ? 'bg-white':'bg-slate-100'} `} >
             <div className='flex flex-col gap-[3px] justify-center items-center'>
-            <img src="http://localhost:3000/images/payment/cod.jpg" alt="" />
+            <img src={logocod} alt="cod" />
             </div> 
             <span className='text-slate-600'>COD</span>                   
         </div> 

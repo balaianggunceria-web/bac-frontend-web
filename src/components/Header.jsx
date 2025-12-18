@@ -14,7 +14,8 @@ import { FaShoppingCart } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { useDispatch, useSelector } from 'react-redux';
 import { get_card_products, get_wishlist_products } from '../store/reducers/cardReducer';
-import {logo, benderaIndonesia} from '../assets/logo_balai_anggun_ceria2.png';
+import logo from '../assets/logo_balai_anggun_ceria2.png';
+import benderaIndonesia from '../assets/BenderaIndonesia.png'
 
 
 
