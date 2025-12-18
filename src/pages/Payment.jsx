@@ -3,8 +3,8 @@ import Header from './../components/Header';
 import Footer from '../components/products/Footer';
 import { useLocation } from 'react-router-dom';
 import Stripe from '../components/Stripe';
-import logoStripe from '../assets/stripe.png'
-import logocod from '../assets/cod.png'
+import logoStripe from '../assets/stripe.png';
+import logocod from '../assets/cod.jpg';
 
 const Payment = () => {
 
