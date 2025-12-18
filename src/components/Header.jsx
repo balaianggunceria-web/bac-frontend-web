@@ -14,7 +14,8 @@ import { FaShoppingCart } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { useDispatch, useSelector } from 'react-redux';
 import { get_card_products, get_wishlist_products } from '../store/reducers/cardReducer';
-import logo from '../assets/logo_balai_anggun_ceria2.png'
+import {logo, benderaIndonesia} from '../assets/logo_balai_anggun_ceria2.png';
+
 
 
 const Header = () => {
@@ -80,7 +81,7 @@ const Header = () => {
                         <div className='flex group cursor-pointer text-slate-800 text-sm justify-center
                             items-center gap-1 relative after:h-[18px] after:w-[1px] after:bg-[#afafaf] after:-right-[16px] 
                             after:absolute before:absolute before:h-[18px] before:bg-[#afafaf] before:w-[1px] before:-left-[20px]'>
-                                <img className='h-[25px]' src="http://localhost:3000/images/BenderaIndonesia.png" alt="" />
+                                <img className='h-[25px]' src={benderaIndonesia} alt="BenderaIndonesia" />
                                 <span><IoMdArrowDropdown /></span>
                                 <ul className='absolute invisible transition-all top-12 rounded-sm duration-200
                                 text-white p-2 w-[100px] flex flex-col gap-3 group-hover:visible group-hover:top-6

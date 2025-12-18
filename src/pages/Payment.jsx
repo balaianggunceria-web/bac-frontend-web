@@ -3,6 +3,7 @@ import Header from './../components/Header';
 import Footer from '../components/products/Footer';
 import { useLocation } from 'react-router-dom';
 import Stripe from '../components/Stripe';
+import logoStripe from '../assets/stripe.png'
 
 const Payment = () => {
 
@@ -22,7 +23,7 @@ const Payment = () => {
                         <div onClick={() => setPaymentMethod('stripe')} 
                         className={`w-[20%] border-r cursor-pointer py-8 px-12 ${paymentMethod === 'stripe' ? 'bg-white':'bg-slate-100'} `} >
             <div className='flex flex-col gap-[3px] justify-center items-center'>
-            <img src="http://localhost:3000/images/payment/stripe.png" alt="" />
+            <img src={logoStripe} alt="stripe" />
             </div>
             <span className='text-slate-600'>Stripe</span> 
         </div>  
