@@ -7,6 +7,7 @@ import { FaGithub } from "react-icons/fa";
 import { useSelector } from 'react-redux';
 import { FaHeart } from "react-icons/fa6";
 import { FaCartShopping } from "react-icons/fa6";
+import logo from "../../assets/logo_balai_anggun_ceria2.png"
 
 const Footer = () => {
 
@@ -19,7 +20,7 @@ const Footer = () => {
             <div className='w-[85%] flex flex-wrap mx-auto border-b py-16 md-lg:pb-10 sm:pb-6'>
                 <div className='w-3/12 lg:w-4/12 sm:w-full'>
                     <div className='flex flex-col gap-2'>
-                        <img className='w-[190px] h-[70px]' src="http://localhost:3000/images/logo_balai_anggun_ceria2.png" alt="logo_balai_anggun_ceria2" />
+                        <img className='w-[190px] h-[70px]' src={logo} alt="logo_balai_anggun_ceria2" />
                         <ul className='flex flex-col gap-2 text-slate-600'>
                             <li>Address : Griya Serpong Asri</li>
                             <li>Phone : +(62) 812 9859 8072</li>

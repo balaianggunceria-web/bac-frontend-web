@@ -14,6 +14,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { useDispatch, useSelector } from 'react-redux';
 import { get_card_products, get_wishlist_products } from '../store/reducers/cardReducer';
+import logo from '../assets/logo_balai_anggun_ceria2.png'
 
 
 const Header = () => {
@@ -112,7 +113,7 @@ const Header = () => {
                             <div className='flex justify-between items-center'>
                           
                         <Link to='/'>
-                            <img src="http://localhost:3000/images/logo_balai_anggun_ceria2.png" alt="" />
+                            <img src={logo} alt="logo_balai_anggun_ceria2" />
                         </Link>
                         <div className='justify-center items-center w-[30px] h-[30px] 
                         bg-white text-slate-600 border border-slate-600 
