@@ -1,19 +1,16 @@
 import axios from "axios";
+ 
 const local = 'http://localhost:5000'
 const production = 'https://bac-backend-web.onrender.com'
-
-let api_url = ''
-let mode = 'pro'
-
-if (mode === 'pro') {
-    api_url = production
-}else{
-    api_url = local
-}
-
+ 
+// Use environment variable instead of hardcoded value
+const mode = process.env.NEXT_PUBLIC_MODE || 'pro'
+ 
+const api_url = mode === 'pro' ? production : local
+ 
 const api = axios.create({
-    baseURL : `${api_url}/api`,
+    baseURL: `${api_url}/api`,
     withCredentials: true
 })
-
+ 
 export default api
