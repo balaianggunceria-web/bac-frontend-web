@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { loadStripe } from '@stripe/stripe-js' 
 import { Elements } from '@stripe/react-stripe-js' 
-import axios from 'axios';
+import api from '../api/api';
 import CheckoutForm from './CheckoutForm';
 const stripePromise = loadStripe('pk_test_51SH7J42O6zVf9Ra2BFQOnAc9qL6m2lrMkVscoyIYxJBcwKvZjTfNbwnb8PdH1QmjZFZyDvAcPiksg3zPkdi2Tj8E00zV7rqtFk')
 
 const Stripe = ({ price, orderId }) => {
 
     const [clientSecret, setClientSecret] = useState('')
+
     const apperance = {
         theme: 'stripe'
     }
@@ -16,12 +17,14 @@ const Stripe = ({ price, orderId }) => {
         clientSecret
     }
 
-    const create_payment = async () => {
+     const create_payment = async () => {
         try {
-            const { data } = await axios.post('http://localhost:5000/api/order/create-payment',{price},{withCredentials:true})
+            // ✅ Use api instance instead of hardcoded URL
+            const { data } = await api.post('/order/create-payment', { price })
             setClientSecret(data.clientSecret)
         } catch (error) {
-            console.log(error.response.data)
+            // ✅ Better error handling
+            console.log(error.response?.data || error.message)
         }
     }
 
